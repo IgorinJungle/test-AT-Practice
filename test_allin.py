@@ -14,7 +14,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 options = webdriver.ChromeOptions()
-# options.add_argument("--headless")
+options.add_argument("--headless")
 # options.add_argument("--ignore-certificate-errors")
 # options.add_argument("--disable-cache")
 service = Service(executable_path=ChromeDriverManager().install())
@@ -66,7 +66,7 @@ def test_submit():
     with allure.step("Fill Adress"):
         adress = driver.find_element("xpath", '//textarea[@id = "textarea"]')
         adress.send_keys("Moscow, Bolschaya Nikitskaya 27,1")
-        
+
 
 
 
